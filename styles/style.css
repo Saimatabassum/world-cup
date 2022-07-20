@@ -1,6 +1,19 @@
 /* font style */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+/* animation styles */
+
+@keyframes lighting {
+    0% {
+        background-color: #DD0000;
+    }
+
+    100% {
+        background-color: green;
+    }
+
+}
+
 /* common styles */
 
 body {
@@ -54,6 +67,14 @@ main {
     background-color: #DD0000;
     padding: 15px 20px;
     border-radius: 5px;
+    animation: lighting 1s linear 0.1s infinite alternate;
+    animation-play-state: running;
+    transition: padding 1s linear;
+}
+
+.show-info .button:hover {
+    padding: 20px 25px;
+
 }
 
 .show-info .button i {
@@ -63,6 +84,8 @@ main {
 .banner-image img {
     width: 581px;
     height: 613px;
+    margin-bottom: -7px;
+    padding-top: 10%;
 }
 
 /* ----------------------
@@ -257,7 +280,7 @@ Media Quary start
     }
 
     .part-1 {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         display: flex;
     }
@@ -316,7 +339,9 @@ Media Quary start
 }
 
 
-/* tablet device */
+/* -------------------
+tablet device 
+-------------------*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .container {
