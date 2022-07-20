@@ -40,8 +40,6 @@ main {
 }
 
 .part-1 {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     color: white;
     background-color: #161616;
@@ -129,7 +127,9 @@ part two start
     color: white;
 }
 
-/* Player box start */
+/* -------------------
+Player box start 
+---------------------*/
 
 .players {
     display: grid;
@@ -171,7 +171,6 @@ part two start
 .icons span {
     padding-left: 10px;
 }
-
 
 .magic-button {
     visibility: hidden;
@@ -224,6 +223,32 @@ Upcomming match start
 .cards .detail h2 {
     font-size: 20px;
 }
+
+/* -----------------
+All group start 
+--------------------*/
+
+.groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 10px;
+    margin-left: 5px;
+}
+
+.group {
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.group .banner img {
+    height: 170px;
+    width: 310px;
+    border-radius: 10px;
+}
+
+
 
 /* -------------------
 Footer part 
@@ -324,8 +349,14 @@ Media Quary start
     }
 
     .players,
-    .cards {
+    .cards,
+    .groups {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .group .banner img {
+        height: 100%;
+        width: 100%;
     }
 
     footer {
@@ -370,7 +401,8 @@ tablet device
     }
 
     .players,
-    .cards {
+    .cards,
+    .groups {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 50px;
     }
@@ -379,6 +411,11 @@ tablet device
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .group .banner img {
+        height: 100%;
+        width: 100%;
     }
 
     .magic-button {
