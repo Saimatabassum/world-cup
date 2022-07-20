@@ -15,7 +15,7 @@ main {
 
 .container {
     width: 90%;
-
+    height: 100%;
 }
 
 /*--------------------
@@ -251,18 +251,12 @@ Media Quary start
 /* Mobile device */
 
 @media only screen and (max-width: 576px) {
-    .container {
-        width: 100%;
-    }
 
     .main {
         width: 100%;
-        text-align: center;
-
     }
 
     .part-1 {
-        /* grid-template-columns: repeat(1, 1fr); */
         flex-direction: column-reverse;
         align-items: center;
         display: flex;
@@ -274,7 +268,21 @@ Media Quary start
     }
 
     .show-info .heading-title {
-        font-size: 250%;
+        font-size: 28px;
+    }
+
+    .show-info p {
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    .show-info .button {
+        padding: 10px 15px;
+        margin-bottom: 50%;
+    }
+
+    .show-info a {
+        padding-bottom: 20px;
     }
 
     .banner-image img {
@@ -282,23 +290,37 @@ Media Quary start
         height: 100%;
     }
 
+    .blogs {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    /* 
-    .half-width {
-        flex-direction: column-reverse;
-    } */
+    .fixed-box {
+        grid-template-columns: repeat(1, 1fr);
+        background-color: white;
+    }
+
+    .players,
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .services {
+        flex-direction: column;
+        padding: 0;
+    }
 }
 
 
 /* tablet device */
 
-@media only screen and (min-width: 577px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .container {
         width: 100%;
-    }
-
-    .part-1 {
-        /* grid-template-columns: repeat(2, 1fr); */
     }
 
     .show-info .heading-title {
@@ -312,25 +334,26 @@ Media Quary start
 
     .fixed-box {
         display: flex;
-        text-align: center;
-        flex-direction: row;
+        height: 100%;
+        width: 100%;
         background-color: white;
-        margin-left: 24%;
     }
 
     .mini-box {
         padding: 20px 60px;
+        margin: 30px 20px;
     }
 
-    .players {
+    .players,
+    .cards {
         grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
+        column-gap: 50px;
     }
 
     .blogs {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .magic-button {
@@ -342,8 +365,8 @@ Media Quary start
     }
 
     .services {
-        /* flex-direction: row; */
         padding: 0;
+        margin-left: 40px;
     }
 
     .services p {
