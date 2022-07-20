@@ -109,8 +109,8 @@ part two start
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 24px;
-    row-gap: 24px;
+    column-gap: 15px;
+    row-gap: 15px;
     width: 70%;
 
 
@@ -150,6 +150,44 @@ part two start
 }
 
 /* -------------------
+Upcomming match start 
+-----------------------*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-left: 15px;
+
+}
+
+.card {
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30;
+}
+
+.card .banner {
+    display: flex;
+    padding: 50px 25px 0px 25px;
+}
+
+.card .banner p {
+    padding: 0 10px;
+}
+
+.cards .detail p {
+    color: #4D4D4D;
+    font-size: 16px;
+}
+
+.cards .detail h2 {
+    font-size: 20px;
+}
+
+/* -------------------
 Footer part 
 ---------------------*/
 
@@ -159,6 +197,10 @@ footer {
     background-color: #161616;
     color: white;
 
+}
+
+.footer {
+    margin-top: 0;
 }
 
 footer .heading-title {
@@ -198,13 +240,14 @@ footer .heading-title {
 
 
 
+
 /* ------------------
 Media Quary start 
 --------------------*/
 
 /* Mobile device */
 
-@media only screen and (max-width: 662px) {
+@media only screen and (max-width: 576px) {
     .container {
         width: 100%;
     }
@@ -220,4 +263,23 @@ Media Quary start
         flex-direction: column-reverse;
         align-items: center;
     }
+}
+
+
+/* tablet device */
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .container {
+        width: auto;
+    }
+
+    .part-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
