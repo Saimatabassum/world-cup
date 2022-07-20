@@ -1,0 +1,138 @@
+/* font style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* common styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    height: 645px;
+}
+
+/*--------------------
+ Part one start 
+ --------------------*/
+
+.half-width {
+    width: 100%;
+}
+
+.part-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    background-color: #161616;
+    border-radius: 30px;
+}
+
+.show-info {
+    padding-left: 80px;
+}
+
+.show-info .heading-title {
+    font-size: 70px;
+}
+
+.show-info p {
+    padding-bottom: 25px;
+    margin-top: -30px;
+}
+
+.show-info .button {
+    text-decoration: none;
+    color: white;
+    background-color: #DD0000;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.show-info .button i {
+    padding-left: 10px;
+}
+
+.banner-image img {
+    width: 581px;
+    height: 613px;
+}
+
+/* ----------------------
+part two start 
+--------------------------*/
+
+.fixed-box {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, 260px);
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 300px;
+    width: 290px;
+    border-radius: 10px;
+}
+
+.mini-box {
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 17px 0;
+}
+
+.fixed-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.fixed-box .blog-color {
+    background-color: #DD0000;
+}
+
+.fixed-box .blog-color a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------
+Media Quary start 
+--------------------*/
+
+/* Mobile device */
+
+@media only screen and (max-width: 662px) {
+    .container {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .part-1 {
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
