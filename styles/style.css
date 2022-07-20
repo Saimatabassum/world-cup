@@ -15,7 +15,7 @@ main {
 
 .container {
     width: 90%;
-    height: 645px;
+
 }
 
 /*--------------------
@@ -23,12 +23,13 @@ main {
  --------------------*/
 
 .half-width {
-    width: 100%;
+    width: 50%;
 }
 
 .part-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
     color: white;
     background-color: #161616;
     border-radius: 30px;
@@ -39,7 +40,7 @@ main {
 }
 
 .show-info .heading-title {
-    font-size: 70px;
+    font-size: 65px;
 }
 
 .show-info p {
@@ -75,7 +76,7 @@ part two start
 
 .fixed-box {
     display: grid;
-    grid-template-columns: repeat(1, 220px);
+    grid-template-columns: repeat(1, 180px);
     align-items: center;
     justify-content: center;
     background-color: black;
@@ -88,6 +89,7 @@ part two start
     background-color: white;
     text-align: center;
     border-radius: 15px;
+    border: 1px solid lightgray;
     padding: 17px 0;
 }
 
@@ -111,9 +113,7 @@ part two start
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
     row-gap: 15px;
-    width: 70%;
-
-
+    padding-left: 15px;
 }
 
 .player {
@@ -147,6 +147,21 @@ part two start
 
 .icons span {
     padding-left: 10px;
+}
+
+
+.magic-button {
+    visibility: hidden;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.magic-button .button {
+    text-decoration: none;
+    color: white;
+    background-color: #DD0000;
+    padding: 15px 20px;
+    border-radius: 5px;
 }
 
 /* -------------------
@@ -193,7 +208,7 @@ Footer part
 
 footer {
     text-align: center;
-    margin-top: 22%;
+    margin-top: 5%;
     background-color: #161616;
     color: white;
 
@@ -229,18 +244,6 @@ footer .heading-title {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------
 Media Quary start 
 --------------------*/
@@ -259,10 +262,31 @@ Media Quary start
     }
 
     .part-1 {
-        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-columns: repeat(1, 1fr); */
         flex-direction: column-reverse;
         align-items: center;
+        display: flex;
     }
+
+    .show-info {
+        text-align: center;
+        padding: 0;
+    }
+
+    .show-info .heading-title {
+        font-size: 250%;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* 
+    .half-width {
+        flex-direction: column-reverse;
+    } */
 }
 
 
@@ -270,16 +294,60 @@ Media Quary start
 
 @media only screen and (min-width: 577px) and (max-width: 992px) {
     .container {
-        width: auto;
+        width: 100%;
     }
 
     .part-1 {
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+
+    .show-info .heading-title {
+        font-size: 40px;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .fixed-box {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        background-color: white;
+        margin-left: 24%;
+    }
+
+    .mini-box {
+        padding: 20px 60px;
+    }
+
+    .players {
         grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
     }
 
     .blogs {
         display: flex;
         flex-direction: column;
+    }
+
+    .magic-button {
+        visibility: visible;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .services {
+        /* flex-direction: row; */
+        padding: 0;
+    }
+
+    .services p {
+        font-size: 13px;
     }
 
 }
