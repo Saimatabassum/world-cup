@@ -68,15 +68,19 @@ main {
 part two start 
 --------------------------*/
 
+.blogs {
+    display: flex;
+    margin-top: 5%;
+}
+
 .fixed-box {
-    position: absolute;
     display: grid;
-    grid-template-columns: repeat(1, 260px);
+    grid-template-columns: repeat(1, 220px);
     align-items: center;
     justify-content: center;
     background-color: black;
-    height: 300px;
-    width: 290px;
+    height: 280px;
+    width: 250px;
     border-radius: 10px;
 }
 
@@ -98,6 +102,87 @@ part two start
 
 .fixed-box .blog-color a {
     color: white;
+}
+
+/* Player box start */
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    row-gap: 24px;
+    width: 70%;
+
+
+}
+
+.player {
+    border: 1px solid lightgray;
+    width: 312px;
+    height: 362px;
+    border-radius: 10px;
+}
+
+.detail {
+    color: #161616;
+    padding: 20px;
+}
+
+.detail .button {
+    border: 1px solid gray;
+    text-decoration: none;
+    color: #161616;
+    font-size: 16px;
+    padding: 4px 16px;
+}
+
+.detail .heading-title {
+    font-size: 18px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.icons span {
+    padding-left: 10px;
+}
+
+/* -------------------
+Footer part 
+---------------------*/
+
+footer {
+    text-align: center;
+    margin-top: 22%;
+    background-color: #161616;
+    color: white;
+
+}
+
+footer .heading-title {
+    padding-top: 60px;
+}
+
+.services {
+    display: flex;
+    border-top: 1px solid rgb(46, 45, 45);
+    padding: 30px 40px 20px 200px;
+
+}
+
+.services p {
+    text-align: center;
+    padding: 5px 18px;
+    color: #B9B9B9;
+    font-size: 16px;
+}
+
+.service-icons i {
+    font-size: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 
 
